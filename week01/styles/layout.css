@@ -1,75 +1,70 @@
-/* Estilos generales para el body*/
+/* Estilos Generales */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     display: grid;
-    grid-template-areas: 
-        "header"
-        "nav"
-        "content"
-        "footer";
-    grid-template-rows: auto auto 1fr auto;
+    grid-template-rows: auto 1fr auto; /* espacios para Header, Content, Footer */
+    grid-template-columns: 1fr;
     min-height: 100vh;
-}
+ }
+ 
+ /* estilos para el Header */
+ header {
+    background-color: #429b55;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+ }
 
-/* Estilos para el encabezado */
-header {
-    grid-area: header;
-    background-color: #1a7127;
-    color: white;
-    padding: 2em;
-}
-
-/* Estilos para la barra de navegación */
-nav {
-    grid-area: nav;
-    background-color: #444;
-}
-
-nav ul {
+ header h2{
+    text-align: left;
+    margin-bottom: 30px;
+ }
+ 
+ nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: space-around;
-}
-
-nav ul li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 20px;
+ }
+ 
+ nav li {
+    margin: 10px 10px;
+ }
+ 
+ nav a {
+    color: #fff;
     text-decoration: none;
-}
-
-nav ul li a:hover {
-    background-color: #50868a;
-}
-
-/* Estilos para el contenido principal */
-#content {
-    grid-area: content;
-    display: flex;
-}
-
-#main {
-    flex: 3; /* El contenido principal ocupará el triple de espacio que el contenido lateral */
+ }
+ 
+ nav a:hover {
+    color: #625aae;
+ }
+ 
+ /* estilos para el Content */
+ #content {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap:10px;
+    padding: 0px;
+ }
+ 
+ #main {
+    background-color: #bdb4b4;
     padding: 20px;
-    background-color: #f9f9f9;
-}
-
-#aside {
-    flex: 1; /*El contenido lateral tendra un tercio del espacio del principal*/
+ }
+ 
+ #aside {
+    background-color: #e6e6e6;
     padding: 20px;
-    background-color: #ddd;
-}
-
-/* Estilos para el pie de página */
-footer {
-    grid-area: footer;
-    background-color: #333;
-    color: white;
+ }
+ 
+ /* estilos para el Footer */
+ footer {
+    background-color: #636764;
+    color: #fff;
+    padding: 20px;
     text-align: center;
-    padding: 1em;
-}
+ }
