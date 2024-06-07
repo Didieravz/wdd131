@@ -1,0 +1,75 @@
+/* Estilos generales para el body*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-areas: 
+        "header"
+        "nav"
+        "content"
+        "footer";
+    grid-template-rows: auto auto 1fr auto;
+    min-height: 100vh;
+}
+
+/* Estilos para el encabezado */
+header {
+    grid-area: header;
+    background-color: #1a7127;
+    color: white;
+    padding: 2em;
+}
+
+/* Estilos para la barra de navegación */
+nav {
+    grid-area: nav;
+    background-color: #444;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #50868a;
+}
+
+/* Estilos para el contenido principal */
+#content {
+    grid-area: content;
+    display: flex;
+}
+
+#main {
+    flex: 3; /* El contenido principal ocupará el triple de espacio que el contenido lateral */
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+#aside {
+    flex: 1; /*El contenido lateral tendra un tercio del espacio del principal*/
+    padding: 20px;
+    background-color: #ddd;
+}
+
+/* Estilos para el pie de página */
+footer {
+    grid-area: footer;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
