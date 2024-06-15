@@ -4,11 +4,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD-131</title>
+    <meta name="author" content="Didier Virguez" />
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Didier Alexander Virguez Zapata.
+     Learning the basics of web development, HTML, CSS, and JavaScript." />
+    <title>WDD-131 - Dynamic Web Fundamentals - Didier Virguez</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;1,100;1,300&display=swap"
+        rel="stylesheet">
+    <script defer src="scripts/getdates.js"></script>
 </head>
 
 <body>
-    <h1>WDD-131 Course</h1>
+    <header>
+        <h1>WDD 131: Dynamic Web Fundamentals - Didier A. Virguez</h1>
+        <nav>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/didiervirguez/?trk=public-profile-join-page">
+                        LinkedIn</a></li>
+                <li><a href="https://byui.instructure.com/">
+                        I-Learn</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/2?lang=spa&id=p25#p25">
+                        Scripture</a></li>
+                <li><a href="#FinalProject">
+                        Final Project</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="card">
+            <h2>About Me</h2>
+            <img src="images/myPicture.jpg" alt="myPicture">
+            <p>My name is Didier, I am from Colombia, I was born in a small town called Muzo,
+                in this town are found the best emeralds in the world. I have been married for 4 years,
+                I have two sweet daughters, one is 7 years old and the other is 2 years old. I currently
+                work as a software developer with Java technology. I like to serve in church, spend
+                time with my family and play soccer in my free time. </p>
+
+
+            <h3>Muzo, Colombia</h3>
+            <img src="images/CumoraEmerald.jpeg" alt="emeralds">
+            <p>Muzo is a small town nestled in the mountains of Boyacá, Colombia, renowned for its
+                world-famous emerald mines that have been operating since the 16th century. This
+                picturesque region boasts lush green landscapes and is considered the birthplace of
+                the finest emeralds on the planet, with a vivid green hue unmatched by any other source.
+                The town's economy and culture revolve around the emerald trade, attracting visitors
+                from all over the world to witness the extraction and processing of these precious
+                gemstones.</p>
+
+        </section>
+        <section class="card">
+            <h2>Web Dev Resources</h2>
+            <ul>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">MDN Web Docs - CSS</a></li>
+                <li><a href="https://www.w3schools.com/css/">W3Schools - CSS Tutorial</a></li>
+                <li><a href="https://css-tricks.com/">CSS-Tricks</a></li>
+                <li><a href="https://www.udemy.com/es/">Udemy</a></li>
+            </ul>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> Didier Alexander Virguez - Colombia</p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
 
 </html>
