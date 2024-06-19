@@ -1,0 +1,56 @@
+/**********large view navigation *************/
+@media (min-width: 37.5em) {
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem; /* Añade relleno alrededor del header */
+    background-color: rgb(66, 72, 86);
+  }
+  h1 {
+    font-size: 1.5em;
+    margin-left: 0;
+    padding: 0;
+    text-align: left;
+    background-color: transparent;
+    flex: 1;
+    box-shadow: none;
+  }
+  #menu {
+    display: none; /* hide hamburger button */
+  }
+  .navigation {
+    display: flex;
+    flex-direction: row;
+    flex: 3;
+    justify-content: flex-end;
+    background-color: transparent;
+    text-decoration: none;
+    border: none;
+  }
+  .navigation a {
+    display: block;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    flex: 1;
+    border-bottom: none;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    grid-column: 1 / -1; /* Hace que el h2 ocupe toda la fila */
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+}
