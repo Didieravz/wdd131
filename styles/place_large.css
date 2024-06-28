@@ -46,9 +46,9 @@ h2 {
   text-align: left;
 }
 
-/* Ajuste del tamaño y centrado de la imagen weather_icon.png en vista pequeña */
+/* Ajuste del tamaño y centrado de la imagen weather_icon.svg en vista pequeña */
 @media (max-width: 500px) {
-  img[src="images/weather_icon.png"] {
+  img[src="images/weather_icon.svg"] {
     width: 70px;
     height: auto;
     display: block;
