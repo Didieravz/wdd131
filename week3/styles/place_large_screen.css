@@ -1,0 +1,74 @@
+:root {
+  --color-yellow: #ffd700;
+  --color-blue: #0033a0;
+  --color-red: #ce1126;
+  --color-bg: #f8f9fa;
+  --color-text: #212529;
+  --semitransparente: rgba(255, 255, 255, 0.8);
+  --font-family: "Roboto", sans-serif;
+}
+@media (min-width: 500px) {
+  main {
+    position: relative; /* Para que las secciones se posicionen relativamente a main */
+    padding: 0;
+    margin: 0;
+  }
+  h2 {
+    text-align: left;
+  }
+  picture img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  section {
+    position: absolute;
+    width: auto;
+    max-width: auto;
+    background-color: var(--semitransparente);
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    border-radius: 1rem;
+  }
+  section.left {
+    top: 10px;
+    left: 20px;
+  }
+  section.rightWeather {
+    bottom: 10px;
+    right: 10px;
+  }
+  section.left h2,
+  section.rightWeather h2 {
+    border-radius: 1rem;
+    background-color: var(--color-yellow);
+    margin-left: -20px;
+    padding: 20px;
+    margin-top: 0;
+  }
+  .weather-header {
+    position: relative;
+  }
+
+  .weather-header img {
+    display: none; /* Oculta la imagen original */
+  }
+
+  .weather-header h2 {
+    position: relative;
+    padding-left: 50px; /* Añade espacio para el icono */
+  }
+  /*pseudo-elemento para el icono frente al h2*/
+  .weather-header h2::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-image: url("../images/weather_icon.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}

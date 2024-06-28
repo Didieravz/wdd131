@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Place Activity</title>
+    <meta name="description" content="pseudo element page.">
+    <meta name="author" content="Didier A. Virguez">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/place_large.css">
+    <link rel="stylesheet" href="styles/place_large_screen.css">
+    <script defer src="scripts/place.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <h1>Colombia</h1>
+    </header>
+
+    <main>
+        <picture>
+            <source srcset="images/ColombiaValleCocora.webp" media="(min-width: 500px)">
+            <img src="images/Colombia_small.webp" alt="Colombia" width="500" height="250">
+        </picture>
+        <section class="left">
+            <div class="data">
+                <h2>Data</h2>
+            </div>
+            <dl class="data-list">
+                <dt>Area:</dt>
+                <dd id="area"></dd>
+                <dt>Population:</dt>
+                <dd id="population"></dd>
+                <dt>Capital:</dt>
+                <dd id="capital"></dd>
+                <dt>Languages:</dt>
+                <dd id="languages"></dd>
+                <dt>Currency:</dt>
+                <dd id="currency"></dd>
+                <dt>Time Zone:</dt>
+                <dd id="timeZone"></dd>
+                <dt>Calling Code:</dt>
+                <dd id="callingCode"></dd>
+                <dt>Internet TLD:</dt>
+                <dd id="internetTLD"></dd>
+            </dl>
+
+        </section>
+        <section class="rightWeather">
+            <div class="weather-header">
+                <h2>Weather</h2>
+                <img src="images/weather_icon.png" alt="Icono clima">
+            </div>
+            <dl class="data-list">
+                <dt>Temperature:</dt>
+                <dd id="temperature"></dd>
+                <dt>Conditions:</dt>
+                <dd id="conditions"></dd>
+                <dt>Wind:</dt>
+                <dd id="windSpeed"></dd>
+                <dt>Wind Chill:</dt>
+                <dd id="windChill"></dd>
+            </dl>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> Didier Alexander Virguez - Colombia</p>
+        <p id="lastModified"></p>
+    </footer>
+
+</body>
+
+</html>

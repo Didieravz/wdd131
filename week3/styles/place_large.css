@@ -1,0 +1,92 @@
+/* Variables globales de CSS */
+:root {
+  --color-yellow: #ffd700;
+  --color-blue: #0033a0;
+  --color-red: #ce1126;
+  --color-bg: #f8f9fa;
+  --color-text: #212529;
+  --font-family: "Roboto", sans-serif;
+}
+/* Estilos generales */
+body {
+  font-family: var(--font-family);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  margin: 0;
+  padding: 0;
+}
+header,
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: var(--color-blue);
+  color: white;
+  border-top: 10px solid var(--color-yellow);
+  border-bottom: 10px solid var(--color-red);
+}
+h2 {
+  color: var(--color-text);
+}
+
+/*--------Ajuste generales para las secciones--------------*/
+
+.data-list {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 2px 8px;
+}
+
+.data-list dt {
+  font-weight: bold;
+  text-align: right;
+}
+
+.data-list dd {
+  margin: 0;
+  text-align: left;
+}
+
+/* Ajuste del tamaño y centrado de la imagen weather_icon.png en vista pequeña */
+@media (max-width: 500px) {
+  img[src="images/weather_icon.png"] {
+    width: 70px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+}
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* Ajustes para tamaño de pantalla small usando media query */
+@media (max-width: 500px) {
+  menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  section {
+    border-bottom: 1px solid var(--color-blue);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+  h2 {
+    position: relative;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .rightWeather {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
