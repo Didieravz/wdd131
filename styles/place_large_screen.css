@@ -24,7 +24,6 @@
   section {
     position: absolute;
     width: auto;
-    max-width: auto;
     background-color: var(--semitransparente);
     padding: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
