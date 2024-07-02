@@ -1,0 +1,40 @@
+:root {
+  --back: black;
+  --gis: grey;
+  --blanco: white;
+  --forelight: hsla(0, 0%, 100%, 1);
+}
+body {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  padding: 5%;
+}
+caption{
+    caption-side: bottom;
+
+}
+thead {
+  background-color: var(--back);
+  color: var(--blanco);
+}
+th,
+td {
+  padding: 0.5em 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  white-space: pre;
+  text-align: center;
+}
+
+table {
+    width: 400px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-collapse: collapse;
+}
+tbody tr:nth-child(even) {
+    background-color: #eee;
+  }
+.grey{
+    background-color: var(--gis);
+}
+
+
+
