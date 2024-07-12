@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Didier A. Virguez" />
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Didier Alexander Virguez Zapata.
+     Learning the basics of web development, HTML, CSS, and JavaScript." />
+    <title>WDD 131 - form activity</title>
+    <link rel="stylesheet" href="styles/form.css">
+    <script defer src="scripts/form.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Product Review</h1>
+    </header>
+
+    <main>
+        <form action="review.html" method="get" class="form">
+
+            <div>
+                <label for="productSelect"> Product Name*</label>
+                <select name="productSelect" id="productSelect" required>
+                    <option value="" disabled selected>Select a Product </option>
+                </select>
+            </div>
+
+            <div>
+                <label>Overall Rating*</label>
+                <div class="stars">
+                    <input type="radio" id="fivestar" name="stars" value="5" required><label for="fivestar"></label>
+                    <input type="radio" id="fourstar" name="stars" value="4" required><label for="fourstar"></label>
+                    <input type="radio" id="threestar" name="stars" value="3" required><label for="threestar"></label>
+                    <input type="radio" id="twostar" name="stars" value="2" required><label for="twostar"></label>
+                    <input type="radio" id="onestar" name="stars" value="1" required><label for="onestar"></label>
+                </div>
+            </div>
+
+            <div>
+                <label for="date">Date of Installation*</label>
+                <input type="date" name="date" id="date" required>
+            </div>
+
+            <div>
+                <label for="features">Which features did you find useful in the product?
+                    <span class="note">(Check all that apply)</span>
+                </label>
+
+                <label><input type="checkbox" id="durability" name="durability" value="durability">Durability</label>
+                <label><input type="checkbox" id="easyUse" name="easyUse" value="easyUse">Easy of Use</label>
+                <label><input type="checkbox" id="performance" name="performance"
+                        value="performance">Performance</label>
+                <label><input type="checkbox" id="desing" name="desing" value="desing">Desing</label>
+            </div>
+
+            <div>
+                <label for="written">Writen Review <span class="optional">(optional)</span></label>
+                <textarea name="written" id="written"></textarea>
+            </div>
+
+            <div>
+                <label for="name">Your Name <span class="optional">(optional)</span></label>
+                <input type="text" id="name" name="name">
+            </div>
+
+            <input type="submit" value="Post Review">
+
+        </form>
+    </main>
+    <footer>
+        <p>&copy; <span id="current-year"></span> Didier Alexander Virguez - Colombia</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
