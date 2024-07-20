@@ -1,0 +1,104 @@
+#emeralds {
+  background-color: #e6f3e6;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.emerald-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.intro {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.emerald-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.emerald-gallery figure {
+  margin: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.emerald-gallery img {
+  width: 100%;
+  height: 250px; /* Fixed height for all images */
+  object-fit: cover; /* This will ensure the image covers the area without distortion */
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.emerald-gallery figcaption {
+  margin-top: 0.5rem;
+}
+
+.emerald-info,
+.buying-guide {
+  background-color: #fff;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.emerald-info ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.emerald-info li::before {
+  content: "• ";
+  color: #2e8b57;
+}
+
+.book-tour {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 1rem;
+  background-color: #2e8b57;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.book-tour:hover {
+  background-color: #25673c;
+}
+
+@media screen and (min-width: 768px) {
+  .emerald-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .intro,
+  .emerald-gallery {
+    grid-column: 1 / -1;
+  }
+
+  .emerald-gallery {
+    grid-template-columns: repeat(
+      3,
+      1fr
+    ); /* Force 3 columns on larger screens */
+  }
+
+  .book-tour {
+    width: auto;
+  }
+}

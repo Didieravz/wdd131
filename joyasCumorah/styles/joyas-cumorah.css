@@ -1,0 +1,268 @@
+/* Estilos generales */
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+  background-color: #fafafa;
+  color: #333;
+}
+
+/* Encabezado */
+header {
+  background-color: #1a633a;
+  color: #f0f0f0;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-family: "Lora", serif;
+}
+
+/* Navegación principal */
+.main-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-nav li {
+  position: relative;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.main-nav a:hover {
+  color: #ffffff;
+  background-color: rgba(0, 128, 0, 0.1);
+}
+
+.main-nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.main-nav a:hover::after {
+  transform: scaleX(1);
+}
+
+/* Menú hamburguesa */
+.menu-toggle {
+  display: none;
+}
+
+/* Estilos de sección */
+section {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem 1rem;
+}
+
+section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-family: "Lora", serif;
+  color: black;
+  text-align: center;
+}
+
+section p {
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+section img,
+.gallery img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+/*estilo para la section Historia*/
+
+#historia h2,
+#experiencia-minera h2,
+#esmeraldas h2 {
+  color: black;
+  border-bottom: 2px solid #2e8b57;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+#historia p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+#historia figure {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+#historia img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+#historia img:hover {
+  transform: scale(1.02);
+}
+
+/* estilo para cada seccion */
+#inicio,
+#experiencia-minera,
+#esmeraldas {
+  background-color: #f0f8f0;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+/* Botón de experiencia */
+.botonExperiencia {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.botonExperiencia button {
+  background-color: #0d2d1d;
+  color: #fff;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.botonExperiencia button:hover {
+  background-color: #25673c;
+  transform: translateY(-2px);
+}
+
+/* Galería de imágenes */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+/* Intro */
+.intro {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.intro figure,
+#historia figure {
+  margin: 0;
+}
+/*texto de la imagen*/
+figcaption {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #0d2d1d;
+  font-style: italic;
+}
+
+/* Pie de página */
+footer {
+  background-color: #1a633a;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Media queries para pantalla pequeña*/
+@media screen and (max-width: 768px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #f0f0f0;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .main-nav {
+    position: fixed;
+    top: 60px;
+    left: -100%;
+    width: 100%;
+    background-color: #2e8b57;
+    transition: 0.3s;
+  }
+
+  .main-nav.active {
+    left: 0;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .main-nav li {
+    margin-bottom: 1rem;
+  }
+
+  .menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .menu-toggle.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .botonExperiencia {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .botonExperiencia button {
+    width: auto;
+  }
+}

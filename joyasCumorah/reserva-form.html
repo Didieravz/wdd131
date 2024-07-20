@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form-reserva</title>
+    <link rel="stylesheet" href="styles/reserva-form.css">
+    <script defer src="scripts/joyas-cumorah.js"></script>
+</head>
+
+<body>
+    <header>
+
+    </header>
+
+    <main>
+        <div id="reserva-form">
+            <h3>Reservation Form</h3>
+            <form id="booking-form">
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="tour">Select Tour:</label>
+                    <select id="tour" name="tour" required>
+                        <option value="">Choose a tour</option>
+                        <option value="discovering-emeralds">Discovering Emeralds</option>
+                        <option value="miner-for-a-day">Miner for a Day</option>
+                        <option value="complete-package">Complete Package</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="date">Preferred Date:</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="participants">Number of Participants:</label>
+                    <input type="number" id="participants" name="participants" min="1" max="10" required>
+                </div>
+                <div class="form-buttons">
+                    <button type="submit">Confirm Reservation</button>
+                    <button type="button" id="return-button">Return</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
+
+</body>
+
+</html>
